@@ -1,0 +1,4 @@
+Bundle-Name: CountryResource-web
+Bundle-SymbolicName: com.liferay.serve.resource.web
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.serve.resource.web.constants

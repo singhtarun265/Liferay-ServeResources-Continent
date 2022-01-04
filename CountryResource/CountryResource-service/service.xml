@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.liferay.serve.resource">
+	<namespace>FOO</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity name="Continent" local-service="true" remote-service="true">
+        <column name="continentCode" type="String" primary="true" />
+        <column name="continentName" type="String" />
+   </entity>
+
+        <entity name="Country" local-service="true" remote-service="true">
+        <column name="countryCode" type="String" primary="true" />
+        <column name="continentCode" type="String" />
+        <column name="countryName" type="String" />
+        <column name="fullName" type="String" />
+       
+       
+        <finder return-type="Collection" name="ContinentCode">
+        <finder-column name="continentCode" />
+        </finder>
+        </entity>
+       
+       
+        <entity name="States" local-service="true" remote-service="true">
+        <column name="stateAbbrev" type="String" primary="true" />
+        <column name="stateName" type="String" />
+        <column name="countryCode" type="String" />
+       
+        <finder return-type="Collection" name="CountryCode">
+        <finder-column name="countryCode" />
+        </finder>
+
+</entity>
+</service-builder>

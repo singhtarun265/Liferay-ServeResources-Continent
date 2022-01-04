@@ -1,0 +1,10 @@
+Bundle-Name: CountryResource-api
+Bundle-SymbolicName: com.liferay.serve.resource.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.serve.resource.exception,\
+	com.liferay.serve.resource.model,\
+	com.liferay.serve.resource.service,\
+	com.liferay.serve.resource.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../CountryResource-service/service.xml

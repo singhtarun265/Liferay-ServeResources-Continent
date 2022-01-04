@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.serve.resource.model.Continent">
+		<field name="continentCode" type="String" />
+		<field name="continentName" type="String" />
+	</model>
+	<model name="com.liferay.serve.resource.model.Country">
+		<field name="countryCode" type="String" />
+		<field name="continentCode" type="String" />
+		<field name="countryName" type="String" />
+		<field name="fullName" type="String" />
+	</model>
+	<model name="com.liferay.serve.resource.model.States">
+		<field name="stateAbbrev" type="String" />
+		<field name="stateName" type="String" />
+		<field name="countryCode" type="String" />
+	</model>
+</model-hints>

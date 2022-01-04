@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:CountryResource:CountryResource-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../CountryResource-api/src/main/java"
+}
+
+group = "com.liferay.serve.resource"

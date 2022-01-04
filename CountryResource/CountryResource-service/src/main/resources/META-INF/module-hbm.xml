@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.liferay.serve.resource.model.Continent" />
+	<import class="com.liferay.serve.resource.model.Country" />
+	<import class="com.liferay.serve.resource.model.States" />
+	<class name="com.liferay.serve.resource.model.impl.ContinentImpl" table="FOO_Continent">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="continentCode" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="continentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.serve.resource.model.impl.CountryImpl" table="FOO_Country">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="countryCode" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="continentCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="countryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="fullName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.serve.resource.model.impl.StatesImpl" table="FOO_States">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="stateAbbrev" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="stateName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="countryCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>
